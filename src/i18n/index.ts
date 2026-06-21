@@ -1,14 +1,14 @@
 import en from './en';
 import es from './es';
-import hi from './hi';
-import ur from './ur';
-import ar from './ar';
+// import hi from './hi';
+// import ur from './ur';
+// import ar from './ar';
 import ja from './ja';
 import zh from './zh';
 
 export type Locale = keyof typeof translations;
 
-const translations = { en, es, hi, ur, ar, ja, zh } as const;
+const translations = { en, es, ja, zh } as const;
 
 export function getTranslations(locale: string) {
   const lang = (locale in translations ? locale : 'en') as Locale;

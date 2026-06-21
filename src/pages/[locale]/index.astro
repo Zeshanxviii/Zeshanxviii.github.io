@@ -5,7 +5,8 @@ import AchievementCard from '../../components/AchievementCard.astro';
 import { useTrans } from '../../i18n';
 
 export function getStaticPaths() {
-  return [{ params: { locale: 'en' } }, { params: { locale: 'es' } }, { params: { locale: 'hi' } }, { params: { locale: 'ur' } }, { params: { locale: 'ar' } }, { params: { locale: 'ja' } }, { params: { locale: 'zh' } }];
+  return [{ params: { locale: 'en' } }, { params: { locale: 'es' } }, { params: { locale: 'ja' } }, { params: { locale: 'zh' } }];
+  // hi, ur, ar temporarily disabled
 }
 
 const locale = Astro.params.locale || 'en';

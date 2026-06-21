@@ -8,7 +8,8 @@ export interface Props {
 const { locale } = Astro.props;
 const t = useTrans(locale);
 const currentPage = Astro.url.pathname;
-const locales = ['en', 'es', 'hi', 'ur', 'ar', 'ja', 'zh'];
+const locales = ['en', 'es', 'ja', 'zh'];
+// hi, ur, ar temporarily disabled
 const currentIndex = locales.indexOf(locale);
 const otherLocale = locales[(currentIndex + 1) % locales.length];
 
